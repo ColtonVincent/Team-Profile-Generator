@@ -2,6 +2,9 @@ const Manager = require("./lib/Manager")
 const Engineer = require("./lib/Engineer")
 const Intern = require("./lib/Intern")
 const inquirer = require("inquirer")
+const generateHTML = require("./src/generateHtml")
+const fs = require('fs')
+const {writeFile} = fs.promises
 const team = []
 const promptEngineer = () => {
 inquirer.prompt([{
@@ -110,7 +113,7 @@ const menu = () => {
                 promptIntern()
                 break;
             default:
-                console.log(team) 
+            writeFile('dist/index.html', generateHTML(team))
         }
     })
 }
