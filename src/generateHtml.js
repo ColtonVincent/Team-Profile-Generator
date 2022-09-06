@@ -4,6 +4,9 @@ const generateHTML = (data) => {
     managers.forEach(manager => {
       html.push(`<div>
       <p>${manager.name}</p>
+      <p>${manager.id}</p>
+      <p>${manager.email}</p>
+      <p>${manager.officeNumber}</p>
       </div>`)
     }); 
     return html.join('')
@@ -13,6 +16,9 @@ const generateHTML = (data) => {
     interns.forEach(intern => {
       html.push(`<div>
       <p>${intern.name}</p>
+      <p>${intern.id}</p>
+      <p>${intern.email}</p>
+      <p>${intern.school}</p>
       </div>`)
     }); 
     return html.join('')
@@ -22,6 +28,9 @@ const generateHTML = (data) => {
     engineers.forEach(engineer => {
       html.push(`<div>
       <p>${engineer.name}</p>
+      <p>${engineer.id}</p>
+      <p>${engineer.email}</p>
+      <p>${engineer.github}</p>
       </div>`)
     }); 
     return html.join('')
