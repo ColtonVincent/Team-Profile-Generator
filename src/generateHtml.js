@@ -8,6 +8,19 @@ const generateHTML = (data) => {
       <p>${manager.email}</p>
       <p>${manager.officeNumber}</p>
       </div>`)
+      html.push(` <div class="card">
+      <div class="card-header">
+          <h2 class="card-title">${manager.name}</h2>
+          <h3 class="card-title"> Manager</h3>
+      </div>
+      <div class="card-body">
+          <ul>
+              <li class="body-list">home</li>
+              <li class="body-list">body</li>
+              <li class="body-list">main</li>
+          </ul>
+      </div>
+  </div>`)
     }); 
     return html.join('')
   }
@@ -42,7 +55,8 @@ const generateHTML = (data) => {
       <meta charset="UTF-8">
       <meta http-equiv="X-UA-Compatible" content="IE=edge">
       <meta name="viewport" content="width=device-width, initial-scale=1.0">
-      <title>Document</title>
+      <link rel="stylesheet" type="text/css" href="./style.css" />
+      <title>Team Profile Generator</title>
   </head>
   <body>
     ${genManager(data.filter(manager => manager.getRole() === 'Manager'))}
