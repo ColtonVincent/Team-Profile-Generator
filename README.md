@@ -46,4 +46,6 @@
 
  ![](./employee-cards.png)
 
-  
+## Link to video recording of how application works
+
+[Video recording](https://drive.google.com/file/d/1EVCvvok5mlG2KOu-AGTSjrowMc4Gnt-u/view)
