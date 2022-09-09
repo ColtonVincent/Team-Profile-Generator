@@ -10,7 +10,7 @@ const generateHTML = (data) => {
       <div class="card-body">
           <ul>
               <li class="body-list">ID: ${manager.id}</li>
-              <li class="body-list">Email: ${manager.email}</li>
+              <li class="body-list">Email: <a href="mailto:${manager.email}">${manager.email}</a></li>
               <li class="body-list">Office number: ${manager.officeNumber}</li>
           </ul>
       </div>
@@ -29,7 +29,7 @@ const generateHTML = (data) => {
       <div class="card-body">
           <ul>
               <li class="body-list">ID: ${intern.id}</li>
-              <li class="body-list">Email: ${intern.email}</li>
+              <li class="body-list">Email: <a href="mailto:${intern.email}">${intern.email}</a></li>
               <li class="body-list">School: ${intern.school}</li>
           </ul>
       </div>
@@ -48,9 +48,10 @@ const generateHTML = (data) => {
       <div class="card-body">
           <ul>
               <li class="body-list">ID: ${engineer.id}</li>
-              <li class="body-list">Email: ${engineer.email}</li>
-              <li class="body-list">Github: ${engineer.github}</li>
+              <li class="body-list">Email: <a href="mailto:${engineer.email}">${engineer.email}</a></li>
+              <li class="body-list">Github:<a href="https://github.com/${engineer.github}">Github</a></li>
           </ul>
+
       </div>
   </div>`)
     }); 
